@@ -2,56 +2,38 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Copy, Check, Share2, Share, MessageSquare, Heart, Link2, Send } from 'lucide-react'
+import { Copy, Check } from 'lucide-react'
 
 const links = [
   {
     id: 1,
-    title: 'GitHub Profile',
-    description: 'Check out my code and projects',
-    icon: Share2,
+    title: 'GitHub',
     url: 'https://github.com',
-    color: 'hover:bg-[#3a3228]',
+    logo: 'https://thesvg.org/icons/github/default.svg',
   },
   {
     id: 2,
     title: 'LinkedIn',
-    description: 'Professional connections',
-    icon: Share,
     url: 'https://linkedin.com',
-    color: 'hover:bg-[#3a3228]',
+    logo: 'https://thesvg.org/icons/linkedin/default.svg',
   },
   {
     id: 3,
-    title: 'Twitter / X',
-    description: 'Follow for updates and insights',
-    icon: MessageSquare,
+    title: 'X',
     url: 'https://twitter.com',
-    color: 'hover:bg-[#3a3228]',
+    logo: 'https://thesvg.org/icons/x/default.svg',
   },
   {
     id: 4,
-    title: 'Instagram',
-    description: 'Visual updates and stories',
-    icon: Heart,
-    url: 'https://instagram.com',
-    color: 'hover:bg-[#3a3228]',
+    title: 'Portfolio',
+    url: '#',
+    logo: 'https://thesvg.org/icons/figma/default.svg',
   },
   {
     id: 5,
-    title: 'Portfolio',
-    description: 'View my work and projects',
-    icon: Link2,
-    url: '#',
-    color: 'hover:bg-[#3a3228]',
-  },
-  {
-    id: 6,
     title: 'Email',
-    description: 'Get in touch with me',
-    icon: Send,
     url: 'mailto:amitabh@example.com',
-    color: 'hover:bg-[#3a3228]',
+    logo: 'https://thesvg.org/icons/gmail/default.svg',
   },
 ]
 
@@ -66,92 +48,90 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Header with Theme Toggle */}
-      <header className="border-b border-border/30">
-        <div className="max-w-2xl mx-auto px-4 py-6 flex items-center justify-between">
-          <div className="text-sm font-medium text-muted-foreground">LinkProfile</div>
-          <button className="p-2 rounded-lg bg-card/50 hover:bg-card transition-colors">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+    <div className="min-h-screen bg-white">
+      {/* Header with Coral Background */}
+      <header className="bg-gradient-to-b from-[#d4a89a] to-[#c99080] pt-8 pb-32">
+        <div className="max-w-2xl mx-auto px-4 flex items-center justify-between">
+          <button className="p-3 rounded-full bg-white/80 hover:bg-white transition-colors">
+            <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.5 1.5H9.5V10.5H0.5V11.5H9.5V20.5H10.5V11.5H19.5V10.5H10.5V1.5Z" />
+            </svg>
+          </button>
+          <button className="p-3 rounded-full bg-white/80 hover:bg-white transition-colors">
+            <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" />
+              <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
             </svg>
           </button>
         </div>
-      </header>
 
-      {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-4 py-12">
         {/* Profile Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mt-8">
           {/* Profile Image */}
           <div className="mb-6 flex justify-center">
-            <div className="relative w-32 h-32">
+            <div className="relative w-40 h-40">
               <Image
-                src="/profile.png"
+                src="/profile.jpg"
                 alt="Amitabh Anmol Pain"
                 fill
-                className="rounded-full object-cover border-4 border-accent/30"
+                className="rounded-full object-cover border-4 border-white shadow-lg"
                 priority
               />
             </div>
           </div>
 
-          {/* Name and Title */}
-          <h1 className="text-4xl font-bold mb-2 text-balance">Amitabh Anmol Pain</h1>
-          <p className="text-lg text-accent mb-4">
-            Full Stack Developer | Tech Enthusiast | Problem Solver
-          </p>
+          {/* Name */}
+          <h1 className="text-4xl font-bold text-white mb-2">Amitabh Anmol Pain</h1>
 
           {/* Bio */}
-          <p className="text-base text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
-            Passionate about building elegant solutions to complex problems. Specializing in web development and creating delightful user experiences.
+          <p className="text-white text-sm max-w-2xl mx-auto px-4 mb-6">
+            SDE intern @HCLTech | 2x Hackathon Winner 🏆 | Backend Developer |Full-Stack Web Developer| AI | CSE DSCE-2027
           </p>
 
           {/* Social Icons */}
-          <div className="flex gap-4 justify-center items-center mb-8">
+          <div className="flex gap-6 justify-center items-center">
             <a
-              href="https://linkedin.com"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-card/50 hover:bg-card hover:text-accent transition-all duration-200"
-              title="LinkedIn"
+              className="text-white hover:opacity-80 transition-opacity"
+              title="Instagram"
             >
-              <Share className="w-5 h-5" />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-card/50 hover:bg-card hover:text-accent transition-all duration-200"
-              title="GitHub"
-            >
-              <Share2 className="w-5 h-5" />
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+              </svg>
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-card/50 hover:bg-card hover:text-accent transition-all duration-200"
-              title="Twitter / X"
+              className="text-white hover:opacity-80 transition-opacity"
+              title="X (Twitter)"
             >
-              <MessageSquare className="w-5 h-5" />
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.868 6.75h-3.308l7.732-8.835L2.882 2.25h6.6l4.759 6.318L18.244 2.25zM17.002 18.808h1.834L6.822 4.146H4.881l12.121 14.662z" />
+              </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://snapchat.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-card/50 hover:bg-card hover:text-accent transition-all duration-200"
-              title="Instagram"
+              className="text-white hover:opacity-80 transition-opacity"
+              title="Snapchat"
             >
-              <Heart className="w-5 h-5" />
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+              </svg>
             </a>
           </div>
         </div>
+      </header>
 
+      {/* Main Content */}
+      <main className="max-w-2xl mx-auto px-4 py-12">
         {/* Links Grid */}
         <div className="space-y-3 mb-12">
           {links.map((link) => {
-            const Icon = link.icon
             const isCopied = copiedId === link.id
 
             return (
@@ -160,44 +140,39 @@ export default function Home() {
                 href={link.url}
                 target={link.url.startsWith('http') && !link.url.startsWith('mailto') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') && !link.url.startsWith('mailto') ? 'noopener noreferrer' : undefined}
-                className={`group flex items-center gap-4 w-full p-4 rounded-xl bg-card border border-border/20 transition-all duration-300 hover:border-accent/30 ${link.color}`}
+                className="group flex items-center gap-4 w-full p-4 rounded-xl bg-gray-50 border border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:border-gray-300 hover:shadow-md"
               >
-                <div className="p-3 rounded-lg bg-secondary/30 group-hover:bg-accent/20 transition-colors">
-                  <Icon className="w-6 h-6 text-accent" />
+                <div className="flex-shrink-0">
+                  <img
+                    src={link.logo}
+                    alt={link.title}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
                 <div className="flex-1 text-left">
-                  <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-gray-700">
                     {link.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{link.description}</p>
                 </div>
                 <button
                   onClick={(e) => {
                     e.preventDefault()
                     handleCopyLink(link.id, link.url)
                   }}
-                  className="p-2 rounded-lg bg-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   title="Copy link"
                 >
                   {isCopied ? (
-                    <Check className="w-4 h-4 text-green-500" />
+                    <Check className="w-4 h-4 text-green-600" />
                   ) : (
-                    <Copy className="w-4 h-4 text-muted-foreground" />
+                    <Copy className="w-4 h-4 text-gray-600" />
                   )}
                 </button>
               </a>
             )
           })}
-        </div>
-
-        {/* Footer */}
-        <div className="text-center border-t border-border/20 pt-8">
-          <p className="text-sm text-muted-foreground mb-4">
-            Connect with me on any of these platforms
-          </p>
-          <button className="px-6 py-2 rounded-lg bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-colors">
-            Get In Touch
-          </button>
         </div>
       </main>
     </div>
