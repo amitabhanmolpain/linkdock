@@ -31,9 +31,9 @@ const links = [
   },
   {
     id: 5,
-    title: 'Instagram',
-    url: 'https://instagram.com/Zo_Zo_King_16',
-    logo: 'https://thesvg.org/icons/instagram/default.svg',
+    title: 'Gmail',
+    url: 'mailto:amitabhanmolpain888@gmail.com',
+    logo: 'https://thesvg.org/icons/gmail/default.svg',
   },
 ]
 
@@ -52,11 +52,15 @@ export default function Home() {
       {/* Header with Dark Gradient */}
       <header className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 pt-8 pb-32">
         <div className="max-w-2xl mx-auto px-4 flex items-center justify-between">
-          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.5 1.5H9.5V10.5H0.5V11.5H9.5V20.5H10.5V11.5H19.5V10.5H10.5V1.5Z" />
-            </svg>
-          </button>
+          <a
+            href="https://github.com/amitabhanmolpain/linkdock"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            title="GitHub Repository"
+          >
+            <img src="https://thesvg.org/icons/github/default.svg" alt="GitHub" className="w-5 h-5" />
+          </a>
           <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
             <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" />
@@ -84,7 +88,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-white mb-2">Amitabh Anmol Pain</h1>
 
           {/* Bio */}
-          <p className="text-white text-sm max-w-2xl mx-auto px-4 mb-6">
+          <p className="text-white text-base font-semibold max-w-2xl mx-auto px-4 mb-6">
             SDE intern @HCLTech | 2x Hackathon Winner 🏆 | Backend Developer |Full-Stack Web Developer| AI | CSE DSCE-2027
           </p>
 
