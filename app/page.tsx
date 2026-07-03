@@ -8,7 +8,7 @@ const links = [
   {
     id: 1,
     title: 'GitHub',
-    url: 'https://github.com',
+    url: 'https://github.com/amitabhanmolpain',
     logo: 'https://thesvg.org/icons/github/default.svg',
   },
   {
@@ -20,20 +20,20 @@ const links = [
   {
     id: 3,
     title: 'X',
-    url: 'https://twitter.com',
+    url: 'https://x.com/AnmolPain22790',
     logo: 'https://thesvg.org/icons/x/default.svg',
   },
   {
     id: 4,
     title: 'Portfolio',
-    url: '#',
-    logo: 'https://thesvg.org/icons/figma/default.svg',
+    url: 'https://amitabh-anmol-pain.vercel.app/',
+    logo: 'https://thesvg.org/icons/vercel/default.svg',
   },
   {
     id: 5,
-    title: 'Email',
-    url: 'mailto:amitabh@example.com',
-    logo: 'https://thesvg.org/icons/gmail/default.svg',
+    title: 'Instagram',
+    url: 'https://instagram.com/Zo_Zo_King_16',
+    logo: 'https://thesvg.org/icons/instagram/default.svg',
   },
 ]
 
@@ -74,7 +74,7 @@ export default function Home() {
                 src="/profile.jpg"
                 alt="Amitabh Anmol Pain"
                 fill
-                className="rounded-full object-cover object-top"
+                className="rounded-full object-cover object-center"
                 priority
               />
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
           {/* Social Icons */}
           <div className="flex gap-4 justify-center items-center">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/Zo_Zo_King_16"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-3 rounded-full bg-gradient-to-br from-pink-500/30 to-pink-600/20 hover:from-pink-500/50 hover:to-pink-600/40 transition-all duration-300 border border-pink-400/30 hover:border-pink-400/60 shadow-lg hover:shadow-pink-500/30"
@@ -100,7 +100,7 @@ export default function Home() {
               <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/AnmolPain22790"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-3 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-600/20 hover:from-blue-500/50 hover:to-blue-600/40 transition-all duration-300 border border-blue-400/30 hover:border-blue-400/60 shadow-lg hover:shadow-blue-500/30"
@@ -118,7 +118,7 @@ export default function Home() {
               <img src="https://thesvg.org/icons/linkedin/default.svg" alt="LinkedIn" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://snapchat.com"
+              href="https://snapchat.com/add/zozoking_16"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-3 rounded-full bg-gradient-to-br from-yellow-500/30 to-yellow-600/20 hover:from-yellow-500/50 hover:to-yellow-600/40 transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400/60 shadow-lg hover:shadow-yellow-500/30"
