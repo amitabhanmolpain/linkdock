@@ -68,13 +68,13 @@ export default function Home() {
         {/* Profile Section */}
         <div className="text-center mt-8">
           {/* Profile Image */}
-          <div className="mb-6 flex justify-center">
-            <div className="relative w-40 h-40">
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-48 h-48">
               <Image
                 src="/profile.jpg"
                 alt="Amitabh Anmol Pain"
                 fill
-                className="rounded-full object-cover"
+                className="rounded-full object-cover object-top"
                 priority
               />
             </div>
@@ -89,42 +89,42 @@ export default function Home() {
           </p>
 
           {/* Social Icons */}
-          <div className="flex gap-6 justify-center items-center">
+          <div className="flex gap-4 justify-center items-center">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
+              className="group p-3 rounded-full bg-gradient-to-br from-pink-500/30 to-pink-600/20 hover:from-pink-500/50 hover:to-pink-600/40 transition-all duration-300 border border-pink-400/30 hover:border-pink-400/60 shadow-lg hover:shadow-pink-500/30"
               title="Instagram"
             >
-              <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-5 h-5" />
+              <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
+              className="group p-3 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-600/20 hover:from-blue-500/50 hover:to-blue-600/40 transition-all duration-300 border border-blue-400/30 hover:border-blue-400/60 shadow-lg hover:shadow-blue-500/30"
               title="X (Twitter)"
             >
-              <img src="https://thesvg.org/icons/x/default.svg" alt="X" className="w-5 h-5" />
+              <img src="https://thesvg.org/icons/x/default.svg" alt="X" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
+              className="group p-3 rounded-full bg-gradient-to-br from-blue-600/30 to-blue-700/20 hover:from-blue-600/50 hover:to-blue-700/40 transition-all duration-300 border border-blue-400/30 hover:border-blue-400/60 shadow-lg hover:shadow-blue-600/30"
               title="LinkedIn"
             >
-              <img src="https://thesvg.org/icons/linkedin/default.svg" alt="LinkedIn" className="w-5 h-5" />
+              <img src="https://thesvg.org/icons/linkedin/default.svg" alt="LinkedIn" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://snapchat.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
+              className="group p-3 rounded-full bg-gradient-to-br from-yellow-500/30 to-yellow-600/20 hover:from-yellow-500/50 hover:to-yellow-600/40 transition-all duration-300 border border-yellow-400/30 hover:border-yellow-400/60 shadow-lg hover:shadow-yellow-500/30"
               title="Snapchat"
             >
-              <img src="https://thesvg.org/icons/snapchat/default.svg" alt="Snapchat" className="w-5 h-5" />
+              <img src="https://thesvg.org/icons/snapchat/default.svg" alt="Snapchat" className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>
