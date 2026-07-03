@@ -48,17 +48,17 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header with Coral Background */}
-      <header className="bg-gradient-to-b from-[#d4a89a] to-[#c99080] pt-8 pb-32">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+      {/* Header with Dark Gradient */}
+      <header className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 pt-8 pb-32">
         <div className="max-w-2xl mx-auto px-4 flex items-center justify-between">
-          <button className="p-3 rounded-full bg-white/80 hover:bg-white transition-colors">
-            <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.5 1.5H9.5V10.5H0.5V11.5H9.5V20.5H10.5V11.5H19.5V10.5H10.5V1.5Z" />
             </svg>
           </button>
-          <button className="p-3 rounded-full bg-white/80 hover:bg-white transition-colors">
-            <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" />
               <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
             </svg>
@@ -94,35 +94,44 @@ export default function Home() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:opacity-80 transition-opacity"
+              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
               title="Instagram"
             >
-              <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-6 h-6" />
+              <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-5 h-5" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:opacity-80 transition-opacity"
+              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
               title="X (Twitter)"
             >
-              <img src="https://thesvg.org/icons/x/default.svg" alt="X" className="w-6 h-6" />
+              <img src="https://thesvg.org/icons/x/default.svg" alt="X" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
+              title="LinkedIn"
+            >
+              <img src="https://thesvg.org/icons/linkedin/default.svg" alt="LinkedIn" className="w-5 h-5" />
             </a>
             <a
               href="https://snapchat.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:opacity-80 transition-opacity"
+              className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200 text-white"
               title="Snapchat"
             >
-              <img src="https://thesvg.org/icons/snapchat/default.svg" alt="Snapchat" className="w-6 h-6" />
+              <img src="https://thesvg.org/icons/snapchat/default.svg" alt="Snapchat" className="w-5 h-5" />
             </a>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-4 py-12">
+      <main className="max-w-2xl mx-auto px-4 py-12 relative z-10">
         {/* Links Grid */}
         <div className="space-y-3 mb-12">
           {links.map((link) => {
@@ -134,19 +143,19 @@ export default function Home() {
                 href={link.url}
                 target={link.url.startsWith('http') && !link.url.startsWith('mailto') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') && !link.url.startsWith('mailto') ? 'noopener noreferrer' : undefined}
-                className="group flex items-center gap-6 w-full p-4 rounded-xl bg-gray-50 border border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:border-gray-300 hover:shadow-md"
+                className="group flex items-center gap-6 w-full p-5 rounded-xl bg-gradient-to-r from-slate-700/50 to-slate-600/30 border border-slate-500/30 transition-all duration-300 hover:from-slate-600/60 hover:to-slate-500/40 hover:border-slate-400/50 hover:shadow-lg hover:shadow-slate-900/50"
               >
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 p-2 rounded-lg bg-gradient-to-br from-slate-600 to-slate-700">
                   <img
                     src={link.logo}
                     alt={link.title}
                     width={36}
                     height={36}
-                    className="w-9 h-9 object-contain"
+                    className="w-6 h-6 object-contain brightness-0 invert"
                   />
                 </div>
                 <div className="flex-1 text-center">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-gray-700">
+                  <h3 className="font-semibold text-white text-sm group-hover:text-blue-300 transition-colors">
                     Amitabh Anmol Pain {link.title}
                   </h3>
                 </div>
@@ -159,9 +168,9 @@ export default function Home() {
                   title="Copy link"
                 >
                   {isCopied ? (
-                    <Check className="w-4 h-4 text-green-600" />
+                    <Check className="w-4 h-4 text-green-400" />
                   ) : (
-                    <Copy className="w-4 h-4 text-gray-600" />
+                    <Copy className="w-4 h-4 text-slate-300" />
                   )}
                 </button>
               </a>
