@@ -74,7 +74,7 @@ export default function Home() {
                 src="/profile.jpg"
                 alt="Amitabh Anmol Pain"
                 fill
-                className="rounded-full object-cover border-4 border-white shadow-lg"
+                className="rounded-full object-cover"
                 priority
               />
             </div>
@@ -97,9 +97,7 @@ export default function Home() {
               className="text-white hover:opacity-80 transition-opacity"
               title="Instagram"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
-              </svg>
+              <img src="https://thesvg.org/icons/instagram/default.svg" alt="Instagram" className="w-6 h-6" />
             </a>
             <a
               href="https://twitter.com"
@@ -108,9 +106,7 @@ export default function Home() {
               className="text-white hover:opacity-80 transition-opacity"
               title="X (Twitter)"
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.868 6.75h-3.308l7.732-8.835L2.882 2.25h6.6l4.759 6.318L18.244 2.25zM17.002 18.808h1.834L6.822 4.146H4.881l12.121 14.662z" />
-              </svg>
+              <img src="https://thesvg.org/icons/x/default.svg" alt="X" className="w-6 h-6" />
             </a>
             <a
               href="https://snapchat.com"
@@ -119,9 +115,7 @@ export default function Home() {
               className="text-white hover:opacity-80 transition-opacity"
               title="Snapchat"
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-              </svg>
+              <img src="https://thesvg.org/icons/snapchat/default.svg" alt="Snapchat" className="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -140,20 +134,20 @@ export default function Home() {
                 href={link.url}
                 target={link.url.startsWith('http') && !link.url.startsWith('mailto') ? '_blank' : undefined}
                 rel={link.url.startsWith('http') && !link.url.startsWith('mailto') ? 'noopener noreferrer' : undefined}
-                className="group flex items-center gap-4 w-full p-4 rounded-xl bg-gray-50 border border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:border-gray-300 hover:shadow-md"
+                className="group flex items-center gap-6 w-full p-4 rounded-xl bg-gray-50 border border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:border-gray-300 hover:shadow-md"
               >
                 <div className="flex-shrink-0">
                   <img
                     src={link.logo}
                     alt={link.title}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 object-contain"
+                    width={36}
+                    height={36}
+                    className="w-9 h-9 object-contain"
                   />
                 </div>
-                <div className="flex-1 text-left">
+                <div className="flex-1 text-center">
                   <h3 className="font-semibold text-gray-900 group-hover:text-gray-700">
-                    {link.title}
+                    Amitabh Anmol Pain {link.title}
                   </h3>
                 </div>
                 <button
