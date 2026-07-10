@@ -78,7 +78,7 @@ export default function Home() {
                 src="/profile.jpg"
                 alt="Amitabh Anmol Pain"
                 fill
-                className="rounded-full object-cover object-center"
+                className="rounded-full object-cover object-top"
                 priority
               />
             </div>
