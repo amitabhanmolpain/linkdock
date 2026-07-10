@@ -5,7 +5,6 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Amitabh Anmol Pain',
   description: 'Professional profile and links',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
