@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       {/* Header with Dark Gradient */}
-      <header className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 pt-8 pb-32">
+      <header className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 pt-8 pb-16">
         <div className="max-w-2xl mx-auto px-4 flex items-center justify-between">
           <a
             href="https://github.com/amitabhanmolpain/linkdock"
@@ -140,7 +140,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-4 py-12 relative z-10">
+      <main className="max-w-2xl mx-auto px-4 pt-6 pb-12 relative z-10">
         {/* Links Grid */}
         <div className="space-y-3 mb-12">
           {links.map((link) => {
