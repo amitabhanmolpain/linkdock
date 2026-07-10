@@ -161,3 +161,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradientBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-moving-gradient {
+  background: linear-gradient(-45deg, #090d16, #0f172a, #1e293b, #0f172a, #090d16);
+  background-size: 300% 300%;
+  animation: gradientBg 15s ease infinite;
+}
