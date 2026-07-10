@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Copy, Check } from 'lucide-react'
+import { Copy, Check, Star, Sparkles } from 'lucide-react'
 
 const links = [
   {
@@ -56,17 +56,22 @@ export default function Home() {
             href="https://github.com/amitabhanmolpain/linkdock"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            title="GitHub Repository"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 hover:border-white/20 transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm"
+            title="Star on GitHub"
           >
-            <img src="https://thesvg.org/icons/github/default.svg" alt="GitHub" className="w-5 h-5" />
+            <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400 animate-pulse" />
+            <span>Star on GitHub</span>
           </a>
-          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" />
-              <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
-            </svg>
-          </button>
+          <a
+            href="https://github.com/amitabhanmolpain/linkdock/fork"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 text-white font-semibold text-xs border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 shadow-md hover:shadow-lg backdrop-blur-sm"
+            title="Create Yours"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
+            <span>Create Yours</span>
+          </a>
         </div>
 
         {/* Profile Section */}
