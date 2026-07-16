@@ -144,19 +144,26 @@ export default function MusicPlayer() {
       {/* Minimized Float Pill */}
       <button
         onClick={() => setIsMinimized(false)}
-        className={`relative group flex items-center justify-center p-3.5 rounded-full bg-slate-900/80 hover:bg-slate-800/90 text-white border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 active:scale-95 ${
+        className={`relative group flex items-center gap-2.5 px-4 py-3 rounded-full bg-slate-900/85 hover:bg-slate-800/95 text-white border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-105 active:scale-95 ${
           isMinimized ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-50 pointer-events-none absolute'
         }`}
         title="Open Music Player"
       >
         {/* Pulsing ring when playing */}
         {isPlaying && (
-          <span className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
+          <span className="absolute inset-0 rounded-full bg-blue-500/10 animate-ping" />
         )}
-        <Music className={`w-5 h-5 ${isPlaying ? 'text-blue-400 animate-pulse' : 'text-slate-300'}`} />
-        {isPlaying && (
-          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-green-500 border border-slate-900" />
-        )}
+        
+        {/* Music icon */}
+        <Music className={`w-4 h-4 transition-colors duration-300 ${isPlaying ? 'text-blue-400 animate-pulse' : 'text-slate-300'}`} />
+        
+        {/* Sound visualizer animation with colors */}
+        <div className="flex items-end gap-0.5 h-3.5 w-5">
+          <div className={`w-0.75 bg-blue-400 rounded-full transition-all duration-300 ${isPlaying ? 'animate-music-bar-1' : 'h-1'}`} />
+          <div className={`w-0.75 bg-indigo-400 rounded-full transition-all duration-300 ${isPlaying ? 'animate-music-bar-2' : 'h-2'}`} />
+          <div className={`w-0.75 bg-purple-400 rounded-full transition-all duration-300 ${isPlaying ? 'animate-music-bar-3' : 'h-1.5'}`} />
+          <div className={`w-0.75 bg-pink-400 rounded-full transition-all duration-300 ${isPlaying ? 'animate-music-bar-4' : 'h-2.5'}`} />
+        </div>
       </button>
 
       {/* Expanded Glassmorphic Card */}
