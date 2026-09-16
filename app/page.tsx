@@ -94,7 +94,7 @@ export default function Home() {
 
           {/* Bio */}
           <p className="text-white text-base font-semibold max-w-2xl mx-auto px-4 mb-6">
-            SDE intern @HCLTech | 2x Hackathon Winner 🏆 | Backend Developer |Full-Stack Web Developer| AI | CSE DSCE-2027
+            Ex Software Engineering Intern @ HCL Tech | 2x Hackathon Winner 🏆 | Backend Developer |Full-Stack Web Developer| AI | CSE DSCE-2027
           </p>
 
           {/* Social Icons */}
